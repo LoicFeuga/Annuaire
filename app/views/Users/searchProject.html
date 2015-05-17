@@ -1,0 +1,26 @@
+<div>
+	<form class="v-marge-bot">
+		<div class="form-group">
+			<label for="input-nom">Nom</label>
+			<input type="text" class="form-control" ng-model="searchNom" id="input-nom" placeholder="entrer le nom">
+		</div>
+		<button type="submit" ng-click="searchProjetsByName()" class="btn btn-default">Rechercher par Nom</button>
+	</form>
+
+	<form class="v-marge-bot">
+		<div class="form-group">
+		<label for="input-prenom">Id</label>
+			<input type="text" class="form-control" ng-model="id" id="input-prenom" placeholder="entrer le nom">
+		</div>
+		<button type="submit" ng-click="searchProjetsById()" class="btn btn-default">Rechercher par Id</button>
+	</form>
+
+	<div  ng-repeat="projet in projetS">
+
+		<h2 ng-if="$index ==0">Résultats</h2>
+		<h3>{{projet.id}} : {{projet.title}}</h3>
+		<p>Descripion : {{projet.description}} </p>
+		<p>Année : {{projet.year}}</p>
+	</div>
+
+</div>

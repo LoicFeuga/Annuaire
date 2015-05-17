@@ -1,0 +1,23 @@
+<div>
+	<form class="v-marge-bot">
+		<div class="form-group">
+			<label for="input-nom">Nom</label>
+			<input type="text" class="form-control" ng-model="searchNom" id="input-nom" placeholder="entrer le nom">
+		</div>
+		<button type="submit" ng-click="searchUserByName()" class="btn btn-default">Rechercher par nom</button>
+	</form>
+
+	<form class="v-marge-bot">
+		<div class="form-group">
+		<label for="input-prenom">Prénom</label>
+			<input type="text" class="form-control" ng-model="searchPrenom" id="input-prenom" placeholder="entrer le nom">
+		</div>
+		<button type="submit" ng-click="searchUserBySurname()" class="btn btn-default">Rechercher par prénom</button>
+	</form>
+	
+	<div  ng-repeat="user in usersS">
+		<h2 ng-if="$index ==0">Résultats : </h2>
+		<p>{{user.id}} : {{user.name}} {{user.surname}} {{user.email}}</p>
+	</div>
+
+</div>

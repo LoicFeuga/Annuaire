@@ -1,0 +1,19 @@
+<div>
+	
+	<form class="v-marge-bot">
+		<div class="form-group">
+			<label for="input-nom">Nom</label>
+			<input type="text" class="form-control" ng-model="deleteNom" id="input-nom" placeholder="entrer le nom">
+		</div>
+		<button type="submit" ng-click="deleteUserByName()" class="btn btn-default">Supprimer par nom</button>
+	</form>
+
+	<form class="v-marge-bot">
+		<div class="form-group">
+			<label for="input-prenom">Prénom</label>
+			<input type="text" class="form-control" ng-model="deletePrenom" id="input-prenom" placeholder="entrer le nom">
+		</div>
+		<button type="submit" ng-click="deleteUserBySurname()" class="btn btn-default">Supprimer par prénom</button>
+	</form>
+
+</div>

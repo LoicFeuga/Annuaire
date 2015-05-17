@@ -1,0 +1,21 @@
+<div class="row v-marge-bot">
+	
+
+	<div class="col-xs-4">
+
+		<select class="form-control" id="select-projets">
+
+			<option ng-repeat="projet in projets" value="{{projet.id}}">{{projet.title}}</option>
+
+		</select>
+
+	</div>
+
+
+	<div class="col-xs-4">
+
+		<div class="btn btn-primary" ng-click="deleteProjet()">Supprimer</div>
+
+	</div>
+
+</div>
